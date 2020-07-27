@@ -1,0 +1,60 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pin Generator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" async ></script>
+        </head>
+        <body id="body">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="pin-generator half-width">
+                <input id="randomPin"class="form-control" type="text" disabled placeholder="Generate Random Pin">
+                <button onclick="randomDigit()" class="generate-btn">Generate Pin</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-section half-width">
+                <input id="numberInput" class="form-control" type="text" disabled>
+                <div class="numbers">
+                    <div class="calc-body">
+                        <div class="calc-button-row">
+                            <div id="7" onclick=" userInput(this.id)" class="button">7</span></div>
+                            <div id="8" onclick=" userInput(this.id)"  class="button">8</div>
+                            <div id="9" onclick=" userInput(this.id)"  class="button">9</div>
+                        </div>
+                        <div class="calc-button-row">
+                            <div id="4" onclick=" userInput(this.id)"  class="button">4</div>
+                            <div id="5" onclick=" userInput(this.id)" class="button">5</div>
+                            <div id="6" onclick=" userInput(this.id)" class="button">6</div>
+                        </div>
+                        <div class="calc-button-row">
+                            <div id="1" onclick=" userInput(this.id)" class="button">1</div>
+                            <div id="2" onclick=" userInput(this.id)"class="button">2</div>
+                            <div id="3" onclick=" userInput(this.id)" class="button">3</div>
+                            
+                        </div>
+                        <div class="calc-button-row">
+                            <div onclick="backCursor()" class="button"><</div>
+                            <div id="0" onclick=" userInput(this.id)" class="button">0</div>
+                            <div onclick="clearInput()" class="button">C</div>
+                        </div>
+                        <div>
+                            <button id="submit" onclick="submitButton()" type="submit" class="submit-btn">Submit</button>
+                            <p class="action-left"><span id="chance">3</span> try left</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="notify-section">
+        <p id="wrong" class="notify">❌ Pin Didn't Match, Please try again</p>
+        <p id="success" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+        </div>
+        </body>
+        </html>
