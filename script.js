@@ -13,6 +13,8 @@ function randomDigit(){
   
     document.getElementById('randomPin').value=result;
     clearInput();
+    document.getElementById('wrong').style.display="none";
+    document.getElementById('success').style.display="none";
     
     
     }
