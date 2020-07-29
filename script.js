@@ -15,6 +15,7 @@ function randomDigit(){
     clearInput();
     document.getElementById('wrong').style.display="none";
     document.getElementById('success').style.display="none";
+    document.getElementById('locked').style.display="block";
     
     
     }
