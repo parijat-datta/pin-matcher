@@ -12,6 +12,7 @@ function randomDigit(){
     }
   
     document.getElementById('randomPin').value=result;
+    clearInput();
     
     
     }
@@ -64,6 +65,8 @@ document.getElementById('numberInput').value+=key;}
    if(oldStr==newStr&oldStr.length!=0&newStr.length!=0){
     document.getElementById('success').style.display="block";
     document.getElementById('wrong').style.display="none";
+    
+    document.getElementById('locked').style.display="none";
 
     //Everytime The Inputs are Matched The number of chance will be set to 3
     document.getElementById('chance').innerText='3';
@@ -75,26 +78,21 @@ document.getElementById('numberInput').value+=key;}
     the Random Number First*/
      if(oldStr.length==0){
         document.getElementById('randomPin').value="Generate Random Pin First";
-    
-        //if user has not generated the Random Pin the Page will Reload automatically after 5s
-        timeFunction(); 
+        clearInput();
     }
      
     /*Checking if user has entered the Input and Telling user to Insert the Pin*/
      if(newStr.length==0){
-        document.getElementById('numberInput').value="Enter Your Pin";
+        alert("Enter your Pin Please");
+        
      }
      
-     //if user has not entered the Pin the Page will Reload automatically after 5s
-      timeFunction();
+     
    }
 
-   if(newStr.length<4){
+   if(newStr.length!=4&newStr.length>0){
        
-    /*If user has not inserted 4 digits it will alert user but the number of 
-    chance will not be decreased and the page will reload after 5s*/
-       document.getElementById('numberInput').value="Pin Must Contain 4 Numbers";
-       timeFunction();
+    alert("Pin Must Contain 4 Numbers");
 
   }
 
@@ -105,15 +103,9 @@ document.getElementById('numberInput').value+=key;}
     document.getElementById('success').style.display="none";
     /*The Number of Chance will be decreased */
     chanceCount();
+    clearInput();
    }
 
-    }
-
-
-
-    //The Page will Reload if User do not Follow the instruction
-    function timeFunction() {
-        setTimeout(function(){ location.reload();}, 5000);
     }
 
     
