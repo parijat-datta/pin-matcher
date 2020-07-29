@@ -4,6 +4,7 @@
 body {
     background: #10101B;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 .container {
     margin-top: 30px;
@@ -26,10 +27,16 @@ body {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-}
+    transition: background-color 0.6s;}
+
 .generate-btn:focus{
     outline: none;
     box-shadow: none;
+}
+.generate-btn:hover{
+    background: linear-gradient(to right, #971706, #ee6352);
+    transform: scale(1.1);
+   
 }
 
 input[type='text'] {
@@ -38,7 +45,7 @@ input[type='text'] {
     color: #495BC3;
     width: 80%;
     margin: 0 auto;
-    font-weight: 700;
+    font-weight: 600;
     border: 2px solid #858299;
     height: 50px;
     padding: 10px;}
@@ -65,17 +72,7 @@ width: 100%;
 }
 
 .button {
-width: 20%;
-background: #425062;
-color: #fff;
-padding: 20px 0;
-margin: 5px;
-display: inline-block;
-font-size: 25px;
-text-align: center;
-vertical-align: middle;
-margin-right: -4px;
-border-radius: 10px;
+
 cursor: pointer;
 }
 .blink-me {
@@ -86,8 +83,20 @@ color: #E0B612;
     margin-top: 20px;
     padding: 10px 120px;
     border-radius: 5px;
-    background: #495BC3;
+    background-color: #495BC3;
     color: #fff;
+    background-position: left;
+    transition: background-position 0.6s;
+}
+
+.submit-btn:hover{
+    border: none;
+    margin-top: 20px;
+    padding: 10px 120px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #971706, #ee6352);
+    background-position: right;
+    transform: scale(1.05);
 }
 .notify {
     color: #fff;
@@ -113,3 +122,36 @@ color: #E0B612;
 
     display:none;
 }
+
+input{
+
+
+    text-align: center;
+}
+
+.button{
+    background: linear-gradient(90deg, #ee6352, purple, #ee6352);
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 0.6s;
+    cursor: pointer;
+    color: white;
+    border: 0;
+    width: 20%;
+    color: #fff;
+    padding: 20px 0;
+    margin: 5px;
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: -4px;
+    border-radius: 10px;
+ 
+}
+
+.button:hover{
+    background-position: right;
+    transform: scale(1.05);
+}
+
